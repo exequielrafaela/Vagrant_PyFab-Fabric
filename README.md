@@ -13,7 +13,7 @@
   <img src="https://github.com/exequielrafaela/Vagrant_PyFab-Fabric/blob/master/Figures/fabric_pyenv.png" 
 </p>
 
-Ejemplo de ejecución: 
+Execution example: 
 	
 	#pending
 
