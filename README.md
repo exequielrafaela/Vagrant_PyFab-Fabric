@@ -11,7 +11,6 @@
   <a href="#">http://docs.fabfile.org/en/1.12/</a>
   <br><br>
   <img src="https://github.com/exequielrafaela/Vagrant_PyFab-Fabric/blob/master/Figures/fabric_pyenv.png" 
-  width="200" height="300">
 </p>
 
 Ejemplo de ejecución: 
