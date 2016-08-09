@@ -7,11 +7,11 @@
   <b>Some Related Links:</b><br>
   <a href="#">https://goo.gl/Nda5sd</a> |
   <a href="#">goo.gl/fKiM57</a> |
-  <a href="#">https://goo.gl/yMNmON</a>
-  <a href="#">https://goo.gl/yMNmON</a>
+  <a href="#">https://goo.gl/yMNmON</a> |
   <a href="#">http://docs.fabfile.org/en/1.12/</a>
   <br><br>
-  <img src="https://github.com/exequielrafaela/LaTeX_BashScripting-Doc/blob/master/Figuras/linux_negro_blanco.png"  width="200" height="300">
+  <img src="https://github.com/exequielrafaela/Vagrant_PyFab-Fabric/blob/master/Figures/fabric_pyenv.png" 
+  width="200" height="300">
 </p>
 
 Ejemplo de ejecución: 
