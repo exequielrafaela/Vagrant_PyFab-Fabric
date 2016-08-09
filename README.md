@@ -1,7 +1,7 @@
 #Vagrant_PyFab-Fabric
 *_Basic Fabric implementation usign Vagrant._*
 
-*In this repo you'll find the Vagrant file and python fabric for the vagrant provisioning and also a fabfile.py with 4 declared roles (localhost, dev, stg, prod). You'll be able to generate shh keys and test them in a list of remote Servers.*
+*In this repo you'll find the Vagrant file and its python fabric provisioning file. Moreover, a fabfile.py with 4 declared roles (localhost, dev, stg, prod). You'll be able to generate shh keys and test them in a list of remote Servers.*
 
 <p align="center">
   <b>Some Related Links:</b><br>
