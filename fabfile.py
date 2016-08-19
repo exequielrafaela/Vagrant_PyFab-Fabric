@@ -8,9 +8,14 @@ def server():
         print colored('######### SERVER #########', 'blue')
         print colored('##########################', 'blue')
 
-        sudo('apt-get -y update')
-        sudo('apt-get -y install python-pip')
+        sudo('yum install -y gcc glibc glibc-common gd gd-devel')
+        sudo('yum install -y python-devel vim')
+        sudo('yum install -y epel-release')
+        sudo('yum install -y python-pip')
+        sudo('pip install --upgrade pip')
+
         sudo('pip install fabric')
+        sudo('pip install termcolor')
         # Alternatively, you can also use *pip*:
         # sudo aptitude install fabric
 
@@ -117,11 +122,7 @@ def client1():
         print colored('##########################', 'blue')
         print colored('######## CLIENT 1 ########', 'blue')
         print colored('##########################', 'blue')
-
-        sudo('apt-get -y update')
-        #sudo('apt-get -y install tcpdump nmap vim')
-        #sudo('apt-get -y install python-pip')
-        #sudo('pip install fabric')
+        sudo('yum install -y vim')
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')
@@ -154,10 +155,8 @@ def client2():
         print colored('######## CLIENT 2 ########', 'blue')
         print colored('##########################', 'blue')
 
-        sudo('apt-get -y update')
-        #sudo('apt-get -y install tcpdump nmap lynx-cur vim')
-        sudo('apt-get -y install apache2')
-        #sudo('pip install fabric')
+        sudo('yum install -y vim')
+        sudo('yum install -y httpd')
 
         sudo('if ! [ -L /var/www ]; then'
              'rm -rf /var/www'
@@ -172,7 +171,9 @@ def client2():
         #sudo('echo "ServerName localhost" >> /etc/apache2/apache2.conf')
         #sudo('cp /vagrant/Apache2/ports.conf /etc/apache2/ports.conf')
         #sudo('sudo cp /vagrant/Apache2/default /etc/apache2/sites-available/default')
-        sudo('service apache2 restart')
+
+        #sudo('apachectl restart')
+        sudo('service httpd restart')
 
         print colored('##########################', 'blue')
         print colored('## NETWORK CONFIGURATION #', 'blue')

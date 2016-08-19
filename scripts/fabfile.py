@@ -12,6 +12,8 @@ from fabric.api import hosts, sudo, settings, hide, env, execute, prompt, run, l
 from termcolor import colored
 import os
 import logging
+#import apt
+import yum
 
 # As a good practice we can log the state of each phase in our script.
 #  https://docs.python.org/2.7/howto/logging.html
@@ -39,6 +41,92 @@ env.roledefs = {
 # Fabrci user and pass.
 env.user = "vagrant"
 env.password = "vagrant"
+
+def apt_package(action,package):
+    with settings(warn_only=False):
+        hostvm = sudo('hostname')
+        if (action =="install"  ):
+            aptcache = apt.Cache()
+            if aptcache[package].is_installed:
+                print colored('###############################################################################', 'yellow')
+                print colored(package + ' ALREADY INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'yellow')
+                print colored('###############################################################################', 'yellow')
+            else:
+                print colored('###############################################################################', 'blue')
+                print colored(package + ' WILL BE INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'blue')
+                print colored('###############################################################################', 'blue')
+                sudo('apt-get update')
+                sudo('apt-get install '+package)
+                aptcachenew = apt.Cache()
+                if aptcachenew[package].is_installed:
+                    print colored('##################################################################################', 'green')
+                    print colored(package + 'SUCCESFULLY INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'green')
+                    print colored('##################################################################################', 'green')
+                else:
+                    print colored('#################################################################################', 'red')
+                    print colored(package + 'INSTALLATION PROBLEM in:' + hostvm + '- IP:' + env.host_string, 'red')
+                    print colored('#################################################################################', 'red')
+
+        elif (action =="upgrade"  ):
+            aptcache = apt.Cache()
+            if aptcache[package].is_installed:
+                print colored('############################################################################', 'yellow')
+                print colored(package + ' TO BE UPGRADED in:' + hostvm + '- IP:' + env.host_string, 'yellow')
+                print colored('############################################################################', 'yellow')
+                sudo('apt-get update')
+                sudo('apt-get install --only-upgrade '+package)
+            else:
+                print colored('###########################################################################', 'red')
+                print colored(package + ' NOT INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'red')
+                print colored('###########################################################################', 'red')
+
+        else:
+            print colored('############################################################################', 'yellow')
+            print colored('Usage eg1: $ fab -R dev apt_package:install,cron', 'red')
+            print colored('Usage eg2: $ fab -R dev apt_package:upgrade,gcc', 'red')
+            print colored('############################################################################', 'blue')
+
+def yum_package(action, package):
+    with settings(warn_only=False):
+        hostvm = sudo('hostname')
+        if(action =="install"):
+            yumcache = yum.YumBase()
+            if yumcache.rpmdb.searchNevra(name=package):
+                print colored('###############################################################################', 'yellow')
+                print colored(package + ' ALREADY INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'yellow')
+                print colored('###############################################################################', 'yellow')
+            else:
+                print colored('###############################################################################', 'blue')
+                print colored(package + ' WILL BE INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'blue')
+                print colored('###############################################################################', 'blue')
+                sudo('yum install -y '+package)
+                yumcache = yum.YumBase()
+                if yumcache.rpmdb.searchNevra(name=package):
+                    print colored('##################################################################################', 'green')
+                    print colored(package + ' SUCCESFULLY INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'green')
+                    print colored('##################################################################################', 'green')
+                else:
+                    print colored('#################################################################################', 'red')
+                    print colored(package + ' INSTALLATION PROBLEM in:' + hostvm + '- IP:' + env.host_string, 'red')
+                    print colored('#################################################################################', 'red')
+
+        elif (action =="upgrade"  ):
+            yumcache = yum.YumBase()
+            if yumcache.rpmdb.searchNevra(name=package):
+                print colored('############################################################################', 'yellow')
+                print colored(package + ' TO BE UPGRADED in:' + hostvm + '- IP:' + env.host_string, 'yellow')
+                print colored('############################################################################', 'yellow')
+                sudo('yum update -y '+package)
+            else:
+                print colored('###########################################################################', 'red')
+                print colored(package + ' NOT INSTALLED in:' + hostvm + '- IP:' + env.host_string, 'red')
+                print colored('###########################################################################', 'red')
+
+        else:
+            print colored('############################################################################', 'yellow')
+            print colored('Usage eg1: $ fab -R dev yum_package:install,cron', 'red')
+            print colored('Usage eg2: $ fab -R dev yum_package:upgrade,gcc', 'red')
+            print colored('############################################################################', 'blue')
 
 def gen_key():
     with settings(warn_only=False):
