@@ -1,1 +1,1 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric","disabled":false,"__vagrantfile":true}}}

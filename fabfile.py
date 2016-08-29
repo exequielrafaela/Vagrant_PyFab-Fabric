@@ -8,7 +8,7 @@ def server():
         print colored('######### SERVER #########', 'blue')
         print colored('##########################', 'blue')
 
-        sudo('yum install -y gcc glibc glibc-common gd gd-devel')
+        sudo('yum install -y gcc glibc glibc-common gd gd-devel openssh-server openssh-clients net-tools')
         sudo('yum install -y python-devel vim')
         sudo('yum install -y epel-release')
         sudo('yum install -y python-pip')
@@ -16,6 +16,7 @@ def server():
 
         sudo('pip install fabric')
         sudo('pip install termcolor')
+        sudo('pip install iptools')
         # Alternatively, you can also use *pip*:
         # sudo aptitude install fabric
 
@@ -122,7 +123,7 @@ def client1():
         print colored('##########################', 'blue')
         print colored('######## CLIENT 1 ########', 'blue')
         print colored('##########################', 'blue')
-        sudo('yum install -y vim')
+        sudo('yum install -y vim openssh-server openssh-clients net-tools')
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')

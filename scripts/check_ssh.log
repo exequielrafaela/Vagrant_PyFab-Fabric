@@ -4981,3 +4981,854 @@ DEBUG:paramiko.transport:[chan 0] EOF received (0)
 DEBUG:paramiko.transport:[chan 0] EOF sent (0)
 DEBUG:paramiko.transport:EOF in transport thread
 DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x24154d0L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for localhost: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:starting thread (client mode): 0x20019410L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x21d4510L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for localhost: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:starting thread (client mode): 0x1401a450L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x21e7410L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:starting thread (client mode): 0x6401a350L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x2a99f10L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+INFO:root:LOG STARTS
+INFO:root:LOG STARTS
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x26b2550L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+INFO:paramiko.transport.sftp:[chan 3] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 3] normalize('.')
+DEBUG:paramiko.transport.sftp:[chan 3] lstat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] stat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 3] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 3] stat('5761ef6d6e668ebb8a2413c80aacb89acede3667')
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+INFO:paramiko.transport.sftp:[chan 3] sftp session closed.
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x29a6590L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+INFO:paramiko.transport.sftp:[chan 3] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 3] normalize('.')
+DEBUG:paramiko.transport.sftp:[chan 3] lstat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] stat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 3] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 3] stat('5761ef6d6e668ebb8a2413c80aacb89acede3667')
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+INFO:paramiko.transport.sftp:[chan 3] sftp session closed.
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x2c2e590L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+INFO:paramiko.transport.sftp:[chan 3] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 3] normalize('.')
+DEBUG:paramiko.transport.sftp:[chan 3] lstat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] stat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 3] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 3] stat('5761ef6d6e668ebb8a2413c80aacb89acede3667')
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+INFO:paramiko.transport.sftp:[chan 3] sftp session closed.
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x1605550L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x28a0590L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x11435d0L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+DEBUG:paramiko.transport:[chan 3] EOF received (3)
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x1136590L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+INFO:paramiko.transport.sftp:[chan 3] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 3] normalize('.')
+DEBUG:paramiko.transport.sftp:[chan 3] lstat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] stat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 3] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 3] stat('5761ef6d6e668ebb8a2413c80aacb89acede3667')
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+INFO:paramiko.transport.sftp:[chan 3] sftp session closed.
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:[chan 7] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 7] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 7 opened.
+DEBUG:paramiko.transport:[chan 7] Sesch channel 7 request ok
+DEBUG:paramiko.transport:[chan 7] Sesch channel 7 request ok
+DEBUG:paramiko.transport:[chan 7] EOF received (7)
+DEBUG:paramiko.transport:[chan 7] EOF sent (7)
+DEBUG:paramiko.transport:[chan 8] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 8] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 8 opened.
+DEBUG:paramiko.transport:[chan 8] Sesch channel 8 request ok
+DEBUG:paramiko.transport:[chan 8] Sesch channel 8 request ok
+DEBUG:paramiko.transport:[chan 8] EOF received (8)
+DEBUG:paramiko.transport:[chan 8] EOF sent (8)
+DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:LOG STARTS
+DEBUG:paramiko.transport:starting thread (client mode): 0x2fd35d0L
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_1.16.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_6.6.1)
+DEBUG:paramiko.transport:kex algos:[u'curve25519-sha256@libssh.org', u'ecdh-sha2-nistp256', u'ecdh-sha2-nistp384', u'ecdh-sha2-nistp521', u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ecdsa-sha2-nistp256', u'ssh-ed25519'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-gcm@openssh.com', u'aes256-gcm@openssh.com', u'chacha20-poly1305@openssh.com', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5-etm@openssh.com', u'hmac-sha1-etm@openssh.com', u'umac-64-etm@openssh.com', u'umac-128-etm@openssh.com', u'hmac-sha2-256-etm@openssh.com', u'hmac-sha2-512-etm@openssh.com', u'hmac-ripemd160-etm@openssh.com', u'hmac-sha1-96-etm@openssh.com', u'hmac-md5-96-etm@openssh.com', u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'umac-128@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.28.128.4: b5fd7d6f650a5857b4fafd6677a89797
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] EOF received (0)
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:[chan 1] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 1] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 1 opened.
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] Sesch channel 1 request ok
+DEBUG:paramiko.transport:[chan 1] EOF received (1)
+DEBUG:paramiko.transport:[chan 1] EOF sent (1)
+DEBUG:paramiko.transport:[chan 2] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 2] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 2 opened.
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] Sesch channel 2 request ok
+DEBUG:paramiko.transport:[chan 2] EOF received (2)
+DEBUG:paramiko.transport:[chan 2] EOF sent (2)
+DEBUG:paramiko.transport:[chan 3] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 3] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 3 opened.
+DEBUG:paramiko.transport:[chan 3] Sesch channel 3 request ok
+INFO:paramiko.transport.sftp:[chan 3] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 3] normalize('.')
+DEBUG:paramiko.transport.sftp:[chan 3] lstat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] stat('/etc/cachefilesd.conf')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 3] open('5761ef6d6e668ebb8a2413c80aacb89acede3667', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 3] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 3] stat('5761ef6d6e668ebb8a2413c80aacb89acede3667')
+DEBUG:paramiko.transport:[chan 4] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 4] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 4 opened.
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] Sesch channel 4 request ok
+DEBUG:paramiko.transport:[chan 4] EOF received (4)
+DEBUG:paramiko.transport:[chan 4] EOF sent (4)
+INFO:paramiko.transport.sftp:[chan 3] sftp session closed.
+DEBUG:paramiko.transport:[chan 3] EOF sent (3)
+DEBUG:paramiko.transport:[chan 5] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 5] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 5 opened.
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:Ignoring message for dead channel 3
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] Sesch channel 5 request ok
+DEBUG:paramiko.transport:[chan 5] EOF received (5)
+DEBUG:paramiko.transport:[chan 5] EOF sent (5)
+DEBUG:paramiko.transport:[chan 6] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 6] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 6 opened.
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] Sesch channel 6 request ok
+DEBUG:paramiko.transport:[chan 6] EOF received (6)
+DEBUG:paramiko.transport:[chan 6] EOF sent (6)
+DEBUG:paramiko.transport:[chan 7] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 7] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 7 opened.
+DEBUG:paramiko.transport:[chan 7] Sesch channel 7 request ok
+DEBUG:paramiko.transport:[chan 7] Sesch channel 7 request ok
+DEBUG:paramiko.transport:[chan 7] EOF received (7)
+DEBUG:paramiko.transport:[chan 7] EOF sent (7)
+DEBUG:paramiko.transport:[chan 8] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 8] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 8 opened.
+DEBUG:paramiko.transport:[chan 8] Sesch channel 8 request ok
+DEBUG:paramiko.transport:[chan 8] Sesch channel 8 request ok
+DEBUG:paramiko.transport:[chan 8] EOF received (8)
+DEBUG:paramiko.transport:[chan 8] EOF sent (8)
+DEBUG:paramiko.transport:EOF in transport thread
