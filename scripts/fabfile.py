@@ -689,13 +689,12 @@ def cachefs_install(nfs_dir, nfs_server_ip, cachetag="mycache",cachedir="/var/ca
         print colored('===============================', 'blue')
         print colored('        FILE NOT CACHED        ', 'blue')
         print colored('===============================', 'blue')
-        sudo('time cp /mnt/nfs/var/nfsshare /dev/null')
+        sudo('time cp /mnt/nfs/var/nfsshare/chefdk-0.17.17-1.el7.x86_64.rpm /tmp')
 
         print colored('==============================', 'blue')
         print colored('        FILE NFS CACHED :)    ', 'blue')
         print colored('==============================', 'blue')
-        sudo('time cp /mnt/nfs/var/nfsshare /dev/null')
-
+        sudo('time cp /mnt/nfs/var/nfsshare/chefdk-0.17.17-1.el7.x86_64.rpm /dev/null')
 
 def nfs_client_centos7(nfs_dir,nfs_server_ip):
     with settings(warn_only=False):
