@@ -16,6 +16,7 @@ import os
 import logging
 import pwd
 import iptools
+import getpass
 
 #import apt
 import yum
@@ -836,6 +837,8 @@ def haproxy_ws(action,ws_ip):
                     sudo('chmod 755 /etc/haproxy/')
                     sudo('chmod 600 /etc/haproxy/haproxy.cfg')
 
+                    sudo('systemctl restart haproxy')
+
                     print colored('=============================================', 'blue', attrs=['bold'])
                     print colored('SERVER ' + ws_ip + ' SUCCESFULLY ADDED to HLB', 'blue', attrs=['bold'])
                     print colored('=============================================', 'blue', attrs=['bold'])
@@ -858,9 +861,12 @@ def haproxy_ws(action,ws_ip):
                     sudo('chmod 755 /etc/haproxy/')
                     sudo('chmod 600 /etc/haproxy/haproxy.cfg')
 
+                    sudo('systemctl restart haproxy')
+
                     print colored('================================================', 'blue', attrs=['bold'])
                     print colored('SERVER ' + ws_ip + ' SUCCESFULLY REMOVED from HLB', 'blue', attrs=['bold'])
                     print colored('================================================', 'blue', attrs=['bold'])
+
                 else:
                     print colored('===========================================================================', 'red')
                     print colored('WRONG ARGs or conditions unmets, eg: trying to add a WS that already exists', 'red')

@@ -8,15 +8,23 @@ def server():
         print colored('######### SERVER #########', 'blue')
         print colored('##########################', 'blue')
 
-        sudo('yum install -y gcc glibc glibc-common gd gd-devel openssh-server openssh-clients net-tools')
-        sudo('yum install -y python-devel vim')
-        sudo('yum install -y epel-release')
+        print colored('###########################', 'blue')
+        print colored('## JUMPHOST PROVISIONING ##', 'blue')
+        print colored('###########################', 'blue')
+        sudo('yum clean all')
+        sudo('yum install -y gcc glibc glibc-common gd gd-devel wget net-tools git')
+        sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients')
+        sudo('yum install -y epel-release ')
+
+        print colored('#########################################', 'blue')
+        print colored('####### INSTALLING PYTHON FABRIC ########', 'blue')
+        print colored('#########################################', 'blue')
         sudo('yum install -y python-pip')
         sudo('pip install --upgrade pip')
-
         sudo('pip install fabric')
         sudo('pip install termcolor')
         sudo('pip install iptools')
+
         # Alternatively, you can also use *pip*:
         # sudo aptitude install fabric
 
@@ -89,11 +97,6 @@ def server():
         #put("/home/e.barrirero/grey_repo/personal_scripts/out_users.txt", "/home/vagrant/scripts/")
 
         print colored('######################################', 'blue')
-        print colored('SERVER BASIC PROVISIONING:      ', 'blue')
-        print colored('######################################', 'blue')
-        #sudo('cp /vagrant/fabric/fabfile.py /home/vagrant/fabfile.py')
-
-        print colored('######################################', 'blue')
         print colored('FIREWALL - NAT TABLE STATUS:      ', 'blue')
         print colored('######################################', 'blue')
         with hide('output'):
@@ -123,7 +126,9 @@ def client1():
         print colored('##########################', 'blue')
         print colored('######## CLIENT 1 ########', 'blue')
         print colored('##########################', 'blue')
-        sudo('yum install -y vim openssh-server openssh-clients net-tools')
+        sudo('yum clean all')
+        sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
+        sudo('yum install -y epel-release')
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')
