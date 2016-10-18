@@ -24,7 +24,7 @@ def server():
         sudo('pip install fabric')
         sudo('pip install termcolor')
         sudo('pip install iptools')
-
+        sudo('pip install passlib')
         # Alternatively, you can also use *pip*:
         # sudo aptitude install fabric
 
