@@ -160,26 +160,23 @@ def client2():
         print colored('##########################', 'blue')
         print colored('######## CLIENT 2 ########', 'blue')
         print colored('##########################', 'blue')
+        sudo('yum clean all')
+        sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
+        sudo('yum install -y epel-release')
 
-        sudo('yum install -y vim')
-        sudo('yum install -y httpd')
+        print colored('######################################', 'blue')
+        print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')
+        print colored('######################################', 'blue')
+        with hide('output'):
+            fw = sudo('iptables -t nat -L')
+        print colored(fw, 'red')
 
-        sudo('if ! [ -L /var/www ]; then'
-             'rm -rf /var/www'
-             'ln -fs /vagrant/ /var/www'
-             'fi')
-
-        print colored('##########################', 'blue')
-        print colored('#### APACHE2 WEB_SERV ####', 'blue')
-        print colored('##########################', 'blue')
-        #sudo('wget -P /var/www/ -E -H -k -K -p http://www.binbash.com.ar')
-        #sudo('cp -r /var/www/www.binbash.com.ar/* /var/www/')
-        #sudo('echo "ServerName localhost" >> /etc/apache2/apache2.conf')
-        #sudo('cp /vagrant/Apache2/ports.conf /etc/apache2/ports.conf')
-        #sudo('sudo cp /vagrant/Apache2/default /etc/apache2/sites-available/default')
-
-        #sudo('apachectl restart')
-        sudo('service httpd restart')
+        print colored('######################################', 'blue')
+        print colored('END FIREWALL - FILTER TABLE STATUS:   ', 'blue')
+        print colored('######################################', 'blue')
+        with hide('output'):
+            fw = sudo('iptables -L')
+        print colored(fw, 'red')
 
         print colored('##########################', 'blue')
         print colored('## NETWORK CONFIGURATION #', 'blue')

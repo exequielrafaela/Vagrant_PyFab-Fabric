@@ -45,6 +45,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       fabric.tasks = ["client1", ]
     end
   end
+
+  config.vm.define :client2 do |cl2|
+    #cl2.ssh.insert_key=false
+    #cl2.vm.box = "centos/7"
+    cl2.vm.box = "geerlingguy/centos7"
+    #cl2.vm.box = "geerlingguy/centos6"
+    #cl2.vm.box = "scalefactory/centos6"
+    cl2.vm.provider "virtualbox" do |vb|
+      vb.memory = 512
+      vb.cpus = 1
+    end
+    cl2.vm.hostname = "centos-client2"
+    #cl2.vm.synced_folder "/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric", "/vagrant", type: "sshfs"
+    cl2.vm.provision :fabric do |fabric|
+      fabric.fabfile_path = "./fabfile.py"
+      fabric.tasks = ["client2", ]
+    end
+  end
 #  config.vm.define :client2 do |cl2|
 #    #cl2.ssh.insert_key=false
 #    cl2.vm.box = "centos/7"
