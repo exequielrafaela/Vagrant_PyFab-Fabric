@@ -12,7 +12,7 @@ def server():
         print colored('## JUMPHOST PROVISIONING ##', 'blue')
         print colored('###########################', 'blue')
         sudo('yum clean all')
-        sudo('yum install -y gcc glibc glibc-common gd gd-devel wget net-tools git')
+        sudo('yum install -y gcc glibc glibc-common gd gd-devel wget net-tools git rsync')
         sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients')
         sudo('yum install -y epel-release ')
 
@@ -24,7 +24,7 @@ def server():
         sudo('pip install fabric')
         sudo('pip install termcolor')
         sudo('pip install iptools')
-
+        sudo('pip install passlib')
         # Alternatively, you can also use *pip*:
         # sudo aptitude install fabric
 
@@ -128,7 +128,7 @@ def client1():
         print colored('##########################', 'blue')
         sudo('yum clean all')
         sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
-        sudo('yum install -y epel-release')
+        sudo('yum install -y epel-release rsync')
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')
@@ -162,7 +162,11 @@ def client2():
         print colored('##########################', 'blue')
         sudo('yum clean all')
         sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
+<<<<<<< HEAD
         sudo('yum install -y epel-release')
+=======
+        sudo('yum install -y epel-release rsync')
+>>>>>>> 63641f605d7fe357e732054dcb8383bf752a81b3
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')
@@ -185,5 +189,5 @@ def client2():
             netconf = sudo('ip addr show')
         print colored(netconf, 'yellow')
 
-        #############################################################################
-        #############################################################################
+#############################################################################
+#############################################################################
