@@ -162,11 +162,8 @@ def client2():
         print colored('##########################', 'blue')
         sudo('yum clean all')
         sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
-<<<<<<< HEAD
         sudo('yum install -y epel-release')
-=======
         sudo('yum install -y epel-release rsync')
->>>>>>> 63641f605d7fe357e732054dcb8383bf752a81b3
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')

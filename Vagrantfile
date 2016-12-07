@@ -57,11 +57,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.cpus = 1
     end
     cl2.vm.hostname = "centos-client2"
-<<<<<<< HEAD
     #cl2.vm.synced_folder "/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric", "/vagrant", type: "sshfs"
-=======
     #cl1.vm.synced_folder "/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric", "/vagrant", type: "sshfs"
->>>>>>> 63641f605d7fe357e732054dcb8383bf752a81b3
     cl2.vm.provision :fabric do |fabric|
       fabric.fabfile_path = "./fabfile.py"
       fabric.tasks = ["client2", ]
