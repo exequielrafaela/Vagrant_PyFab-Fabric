@@ -1,4 +1,6 @@
-from fabric.api import run, sudo, settings, hide, put
+from fabric.api import run, sudo, settings, hide
+from fabric.context_managers import cd
+from fabric.contrib.files import exists
 from termcolor import colored
 
 def server_ubuntu():
@@ -13,6 +15,18 @@ def server_ubuntu():
         sudo('apt-get update')
         sudo('apt-get -y upgrade')
         sudo('apt-get install -y git')
+        with cd('/home/vagrant'):
+            if exists('/home/vagrant/proton', use_sudo=True):
+                with cd('/home/vagrant/proton'):
+                    sudo('fab -R local inst_ubu_14_fab.install_upgrade_python_27_13:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_jenkins:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_docker:vagrant')
+            else:
+                run('git clone https://github.com/exequielrafaela/proton.git')
+                with cd('/home/vagrant/proton'):
+                    sudo('fab -R local inst_ubu_14_fab.install_upgrade_python_27_13:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_jenkins:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_docker:vagrant')
 
         print colored('######################################', 'blue')
         print colored('FIREWALL - NAT TABLE STATUS:      ', 'blue')
@@ -92,6 +106,18 @@ def client1():
         sudo('yum clean all')
         sudo('yum install -y python-devel vim net-tools sudo openssh-server openssh-clients wget')
         sudo('yum install -y epel-release rsync')
+        with cd('/home/vagrant'):
+            if exists('/home/vagrant/proton', use_sudo=True):
+                with cd('/home/vagrant/proton'):
+                    sudo('fab -R local inst_ubu_14_fab.install_upgrade_python_27_13:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_jenkins:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_docker:vagrant')
+            else:
+                run('git clone https://github.com/exequielrafaela/proton.git')
+                with cd('/home/vagrant/proton'):
+                    sudo('fab -R local inst_ubu_14_fab.install_upgrade_python_27_13:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_jenkins:vagrant')
+                    sudo('fab -R local inst_ubu_14_fab.install_docker:vagrant')
 
         print colored('######################################', 'blue')
         print colored('END FIREWALL - NAT TABLE STATUS:      ', 'blue')

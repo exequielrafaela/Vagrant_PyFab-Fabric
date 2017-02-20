@@ -18,8 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :server do |srv|
     #srv.ssh.insert_key=false
-    srv.vm.box = "centos/7"
+    #srv.vm.box = "centos/7"
     #srv.vm.box = "geerlingguy/centos7"
+    srv.vm.box = "ubuntu/trusty64"
     srv.vm.network "forwarded_port", guest: 8080, host: 8080
     srv.vm.provider "virtualbox" do |vb|
       vb.memory = 512
@@ -29,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #srv.vm.synced_folder "/home/e.barrirero/vagrant_projects/Vagrant_PyFab-Fabric", "/vagrant", type: "sshfs"
     srv.vm.provision :fabric do |fabric|
       fabric.fabfile_path = "./fabfile.py"
-      fabric.tasks = ["server", ]
+      fabric.tasks = ["server_ubuntu", ]
     end
   end
 
